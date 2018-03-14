@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,17 @@ namespace LabSheet6
     /// </summary>
     public partial class MainWindow : Window
     {
+        public enum Stock {Low , Normal, Overstocked };
+        public Stock StockLevel;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            lbox_StockLevel.ItemsSource = StockLevel.GetType().GetEnumNames();
+            lbox_StockLevel.SelectedIndex = 0;
         }
     }
 }

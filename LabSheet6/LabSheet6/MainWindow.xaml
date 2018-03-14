@@ -5,8 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabSheet6"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid>
-        
-    </Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Vertical">
+                    <Label Name="lbl_StockLevel" Content="Stock Level" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"></Label>
+                    <ListBox Name="lbox_StockLevel" HorizontalAlignment="Center" VerticalAlignment="Top"></ListBox>
+
+                </StackPanel>
+                 </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel Orientation="Vertical">
+                <Label Name="lbl_Suppliers" Content="Suppliers" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"></Label>
+                <ListBox Name="lbox_Supplier" HorizontalAlignment="Center" VerticalAlignment="Top"></ListBox>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="2">
+                <StackPanel Orientation="Vertical">
+                    <Label Name="lbl_Country" Content="Country" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"></Label>
+                <ListBox Name="lbox_Country" HorizontalAlignment="Center" VerticalAlignment="Top"></ListBox>
+                </StackPanel>
+            </Grid>
+            
+            
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid>
+                <StackPanel Orientation="Vertical">
+                    <Label Name="lbl_Products" Content="Products" Background="Gray" HorizontalAlignment="Center" VerticalAlignment="Top"></Label>
+                <ListBox Name="lbox_Products" HorizontalAlignment="Center" VerticalAlignment="Top"></ListBox>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        </Grid>
 </Window>
